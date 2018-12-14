@@ -25,11 +25,11 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-//            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-//            \Illuminate\Session\Middleware\StartSession::class,
-//            // \Illuminate\Session\Middleware\AuthenticateSession::class,
-//            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-//            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            // \Illuminate\Session\Middleware\AuthenticateSession::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
         'api' => [
@@ -64,10 +64,10 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middlewarePriority = [
-//        \Illuminate\Session\Middleware\StartSession::class,
-//        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-//        \Illuminate\Session\Middleware\AuthenticateSession::class,
-//        \Illuminate\Routing\Middleware\SubstituteBindings::class,
-//        \Illuminate\Auth\Middleware\Authorize::class,
+        \Illuminate\Session\Middleware\StartSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+        \Illuminate\Session\Middleware\AuthenticateSession::class,
+        \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        \Illuminate\Auth\Middleware\Authorize::class,
     ];
 }
