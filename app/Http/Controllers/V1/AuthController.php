@@ -24,7 +24,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('refresh', ['except' => ['login', 'register', 'test']]);
+        $this->middleware('jwt.auth', ['except' => ['login', 'register', 'test']]);
     }
 
     public function test()
