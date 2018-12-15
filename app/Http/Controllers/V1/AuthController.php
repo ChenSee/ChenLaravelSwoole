@@ -46,7 +46,7 @@ class AuthController extends Controller
 
         // 验证格式
         if ($validator->fails()) {
-            return $this->response->array(['error' => $validator->errors()]);
+            return $this->response->array(['error' => $validator->errors()])->setStatusCode(400);
         }
 
         // 创建用户
@@ -59,7 +59,7 @@ class AuthController extends Controller
         if ($result) {
             return $this->response->array(['success' => '创建用户成功']);
         } else {
-            return $this->response->array(['error' => '创建用户失败']);
+            return $this->response->array(['error' => '创建用户失败'])->setStatusCode(400);
         }
 
     }
