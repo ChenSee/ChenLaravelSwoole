@@ -9,5 +9,6 @@ php -r "file_exists('.env') || copy('.env.example', '.env');" # 配置文件生�
 php artisan serve # 普通运行
 php artisan laravels {start|stop|restart|reload|publish} # swoole 运行
 php artisan db:seed  # 导出数据
-php artisan code:models # 根据数据库生成model
+php artisan make:model User -crm # 生成model
+php artisan api:routes # 查看路由
 ```
