@@ -14,4 +14,11 @@ php artisan api:routes # 查看路由
 php artisan migrate:fresh --seed # 删除所有表 & 迁移
 php artisan api:docs --name API --output-file storage/app/api.md # 导出文档
 php artisan make:migration create_name_table # 创建表
+
+
+php artisan db:seed --class="Moell\Mojito\Database\MojitoTableSeeder"
+npm run production
+# 后台登陆地址为 http://localhost/admin/login
+# 账号 admin@gmail.com
+# 密码 secret
 ```
